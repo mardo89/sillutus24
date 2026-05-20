@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eluasemepiirkonnas paigaldus — naabrite, müra, prahi...</title>
+  <meta name="description" content="Eluasemepiirkonna spetsiifika: paigalduse müra, prahi, transport, parkimine, naabritega koordineerimine. Mida oodata, kui kaua kestab, kuidas planeerida...">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bgrupp.ee/blog/tanavakivi-uksikolaja-ohutu-paigaldus/">
+
+  <meta property="og:title" content="Eluasemepiirkonnas paigaldus — naabrite, müra, prahi...">
+  <meta property="og:description" content="Eluasemepiirkonna spetsiifika: paigalduse müra, prahi, transport, parkimine, naabritega koordineerimine. Mida oodata, kui kaua kestab, kuidas planeerida...">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bgrupp.ee/blog/tanavakivi-uksikolaja-ohutu-paigaldus/">
+  <meta property="og:image" content="https://bgrupp.ee/og-image.jpg">
+  <meta property="og:locale" content="et_EE">
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#f7fdf9;--surface:#fff;--ink:#052e1a;--ink-2:#15543a;--muted:#5b8071;
+      --accent:#16a34a;--accent-dark:#15803d;--accent-soft:#dcfce7;
+      --line:#d1fae5;--success:#15803d;--warn:#b45309;--radius:12px;
+      --shadow:0 1px 2px rgba(0,0,0,.04),0 4px 12px rgba(5,46,26,.08);
+      --shadow-lg:0 10px 30px rgba(5,46,26,.12);
+    }
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+      background:var(--bg);color:var(--ink);line-height:1.55;font-size:17px;
+      -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    }
+    img{max-width:100%;height:auto;display:block}
+    a{color:var(--accent-dark);text-decoration:none}
+    a:hover{text-decoration:underline}
+    button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+
+    .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+    section{padding:64px 0}
+    @media(min-width:768px){section{padding:88px 0}}
+
+    h1,h2,h3{line-height:1.15;letter-spacing:-.02em;font-weight:800;color:var(--ink)}
+    h1{font-size:clamp(2.1rem,5vw,3.4rem)}
+    h2{font-size:clamp(1.7rem,3.5vw,2.3rem);margin-bottom:.5em}
+    h3{font-size:1.2rem;margin-bottom:.4em}
+    p{color:var(--ink-2)}
+    .lead{font-size:1.15rem;color:var(--ink-2);max-width:640px}
+
+    /* Header */
+    .top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+    .top-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1140px;margin:0 auto;gap:14px}
+    .brand{font-weight:900;font-size:1.2rem;letter-spacing:-.02em;display:inline-flex;align-items:baseline;gap:2px}
+    .brand b{color:var(--accent)}
+    .brand small{font-size:.7rem;color:var(--muted);font-weight:700;margin-left:6px;text-transform:uppercase;letter-spacing:.05em}
+    .top-cta{display:flex;align-items:center;gap:10px}
+    .top-phone{font-weight:700;color:var(--ink);font-size:.95rem;white-space:nowrap}
+    @media(max-width:560px){.top-phone{display:none}}
+
+    /* Speed strip */
+    .speed-strip{background:var(--ink);color:#bbf7d0;font-size:.85rem;padding:8px 20px;text-align:center;font-weight:600}
+    .speed-strip strong{color:#fff}
+
+    /* Hero */
+    .hero{padding-top:48px;padding-bottom:32px;background:linear-gradient(180deg,#fff 0%,var(--bg) 100%)}
+    .hero-grid{display:grid;gap:32px;align-items:center}
+    @media(min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr;gap:48px}.hero{padding-top:72px;padding-bottom:56px}}
+    .hero h1{margin-bottom:.4em}
+    .hero h1 mark{background:var(--accent-soft);color:var(--accent-dark);padding:0 .15em;border-radius:6px}
+    .hero .lead{margin-bottom:24px}
+
+    /* Big price tile */
+    .price-tile{display:inline-flex;align-items:baseline;gap:10px;background:var(--accent-soft);padding:14px 18px;border-radius:12px;margin-bottom:20px;border:1px solid var(--line)}
+    .price-tile .num{font-size:2rem;font-weight:900;color:var(--accent-dark);letter-spacing:-.03em;line-height:1}
+    .price-tile .lbl{font-size:.95rem;color:var(--ink-2);font-weight:600}
+
+    /* Bullet list (USPs) */
+    .checks{list-style:none;margin:18px 0 24px;display:grid;gap:8px}
+    .checks li{font-size:1rem;color:var(--ink);padding-left:30px;position:relative}
+    .checks li::before{content:"✓";position:absolute;left:0;width:22px;height:22px;background:var(--accent);color:#fff;border-radius:50%;font-size:.8rem;font-weight:900;display:grid;place-items:center;top:1px}
+
+    .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:10px;font-weight:800;font-size:1rem;transition:transform .1s,box-shadow .15s,background .15s;text-decoration:none;min-height:50px}
+    .btn-primary{background:var(--accent);color:#fff;box-shadow:var(--shadow)}
+    .btn-primary:hover{background:var(--accent-dark);box-shadow:var(--shadow-lg);text-decoration:none}
+    .btn-secondary{background:var(--ink);color:#fff}
+    .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+    .btn-ghost:hover{background:var(--ink);color:#fff;text-decoration:none}
+
+    /* Quick form */
+    .quick{background:#fff;border-radius:14px;padding:24px;box-shadow:var(--shadow-lg);border:2px solid var(--accent)}
+    .quick .label-stripe{display:inline-block;background:var(--accent);color:#fff;font-size:.78rem;font-weight:800;padding:4px 10px;border-radius:6px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em}
+    .quick h2{font-size:1.4rem;margin-bottom:.3em}
+    .quick .sub{font-size:.95rem;color:var(--muted);margin-bottom:16px}
+    .field{margin-bottom:12px}
+    .field label{display:block;font-weight:700;font-size:.85rem;color:var(--ink);margin-bottom:5px}
+    .field input,.field select,.field textarea{
+      width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:8px;font:inherit;font-size:1rem;
+      background:#fff;color:var(--ink);transition:border-color .15s,box-shadow .15s;
+    }
+    .field input:focus,.field select:focus,.field textarea:focus{
+      outline:0;border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft);
+    }
+    .field-row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+    .quick .btn{width:100%;margin-top:6px}
+    .form-foot{margin-top:10px;font-size:.78rem;color:var(--muted);text-align:center}
+
+    /* Trust strip */
+    .trust{background:#fff;border-block:1px solid var(--line);padding:24px 0}
+    .trust-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;text-align:center}
+    @media(min-width:760px){.trust-grid{grid-template-columns:repeat(4,1fr);gap:24px}}
+    .trust-item .num{font-size:1.7rem;font-weight:900;color:var(--accent-dark);letter-spacing:-.02em}
+    .trust-item .lbl{font-size:.82rem;color:var(--muted);margin-top:2px;font-weight:600}
+
+    /* Pricing cards */
+    .pricing{background:#fff}
+    .pricing-grid{display:grid;gap:18px;margin-top:40px}
+    @media(min-width:760px){.pricing-grid{grid-template-columns:repeat(3,1fr)}}
+    .price-card{background:#fff;border:2px solid var(--line);border-radius:14px;padding:28px;position:relative;transition:transform .15s,border-color .15s,box-shadow .15s}
+    .price-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+    .price-card.featured{border-color:var(--accent);background:linear-gradient(180deg,var(--accent-soft) 0%,#fff 30%)}
+    .price-card .ribbon{position:absolute;top:-12px;left:24px;background:var(--accent);color:#fff;font-size:.72rem;font-weight:800;padding:4px 10px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em}
+    .price-card h3{font-size:1.15rem}
+    .price-card .from{font-size:.9rem;color:var(--muted);font-weight:600;margin-top:6px}
+    .price-card .big{font-size:2.2rem;font-weight:900;color:var(--ink);letter-spacing:-.03em;line-height:1;margin-top:4px}
+    .price-card .big small{font-size:1rem;color:var(--muted);font-weight:600}
+    .price-card ul{list-style:none;margin-top:18px}
+    .price-card ul li{font-size:.93rem;color:var(--ink-2);padding:6px 0 6px 22px;position:relative}
+    .price-card ul li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:900}
+    .price-card .btn{width:100%;margin-top:18px}
+
+    /* Process strip */
+    .process{background:var(--ink);color:#fff;padding:48px 0;text-align:center}
+    .process h2{color:#fff}
+    .process .lead{color:#bbf7d0;margin-left:auto;margin-right:auto}
+    .process-grid{display:grid;gap:18px;margin-top:40px;grid-template-columns:repeat(2,1fr)}
+    @media(min-width:760px){.process-grid{grid-template-columns:repeat(4,1fr)}}
+    .pstep{padding:18px}
+    .pstep .num{font-size:2.5rem;font-weight:900;color:var(--accent);letter-spacing:-.03em;line-height:1}
+    .pstep h3{color:#fff;margin-top:8px;font-size:1.05rem}
+    .pstep p{color:#bbf7d0;font-size:.92rem;margin-top:4px}
+
+    /* Gallery */
+    .gallery{background:var(--bg)}
+    .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:36px}
+    @media(min-width:760px){.gallery-grid{grid-template-columns:repeat(3,1fr);gap:12px}}
+    .gallery-grid img{aspect-ratio:4/3;width:100%;object-fit:cover;border-radius:10px;display:block;transition:transform .3s}
+    .gallery-grid img:hover{transform:scale(1.02)}
+
+    /* FAQ */
+    .faq{max-width:780px;margin:40px auto 0}
+    .faq details{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:0;margin-bottom:8px;overflow:hidden;transition:border-color .15s}
+    .faq details[open]{border-color:var(--accent)}
+    .faq summary{padding:16px 20px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;color:var(--ink)}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";font-size:1.4rem;color:var(--accent);transition:transform .15s;flex:none;font-weight:800}
+    .faq details[open] summary::after{transform:rotate(45deg)}
+    .faq details p{padding:0 20px 18px;color:var(--ink-2);font-size:.95rem}
+
+    /* Final CTA */
+    .cta-final{background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%);color:#fff;text-align:center}
+    .cta-final h2{color:#fff;font-size:clamp(1.8rem,4vw,2.6rem)}
+    .cta-final p{color:#dcfce7;font-size:1.1rem;max-width:540px;margin:12px auto 24px}
+    .cta-final .cta-row{justify-content:center}
+    .cta-final .btn-secondary{background:#fff;color:var(--accent-dark)}
+    .cta-final .btn-secondary:hover{background:var(--ink);color:#fff}
+    .cta-final .btn-ghost{color:#fff;border-color:#fff}
+    .cta-final .btn-ghost:hover{background:#fff;color:var(--accent-dark)}
+
+    footer{background:#022c1a;color:#86efac;padding:48px 0 28px;font-size:.92rem}
+    .foot-grid{display:grid;gap:28px;margin-bottom:32px}
+    @media(min-width:760px){.foot-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+    .foot-grid h4{color:#fff;margin-bottom:12px;font-size:1rem}
+    .foot-grid a{color:#bbf7d0;display:block;padding:3px 0}
+    .foot-grid a:hover{color:#fff}
+    .foot-bottom{border-top:1px solid #064e3b;padding-top:20px;text-align:center;font-size:.85rem}
+
+    .sticky-bar{display:none;position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 20px rgba(0,0,0,.08);padding:10px;z-index:40}
+    .sticky-bar .btn{flex:1;min-height:46px;padding:11px;font-size:.93rem}
+    @media(max-width:760px){.sticky-bar{display:flex;gap:8px}body{padding-bottom:74px}}
+    /* a11y: visible focus ring for keyboard users — WCAG 2.1 AA */
+    a:focus-visible,button:focus-visible,summary:focus-visible,.btn:focus-visible{outline:3px solid #16a34a;outline-offset:2px;border-radius:6px}
+    /* responsive tables — horizontal scroll on narrow viewports */
+    .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5em 0}
+    .table-scroll table{margin:0;min-width:560px}
+    @media(max-width:560px){article table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap;min-width:0}}
+    /* very narrow screens — keep sticky CTAs compact */
+    @media(max-width:380px){.sticky-bar .btn{font-size:.86rem;padding:11px 8px;min-height:46px}.top-cta>.btn{padding:8px 12px;font-size:.85rem}}
+
+
+  </style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <a href="/" class="brand">B<b>Grupp</b><small>Soodne sillutus</small></a>
+    <div class="top-cta">
+      <a href="tel:+37258374422" class="top-phone">📞 +372 58374422</a>
+      <a href="#kontakt-top" class="btn btn-primary" style="padding:9px 14px;min-height:auto;font-size:.9rem">Saa hind</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="breadcrumbs" style="font-size:.85rem;color:#737373;margin-bottom:18px;padding-top:12px"><a href="/">Avaleht</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Eluasemepiirkonnas paigaldus — naabrite, müra, prahi haldamine</nav>
+</div>
+
+<article style="max-width:780px;margin:0 auto;padding:0 20px">
+  <div class="article-meta">
+  <span class="meta-date">17. mai 2026</span>
+  <span class="meta-sep">·</span>
+  <span class="meta-author">Keio Soo</span>
+  <span class="meta-sep">·</span>
+  <span class="meta-readtime">8 min lugemist</span>
+</div>
+
+<h1>Eluasemepiirkonnas paigaldus — naabrite, müra, prahi haldamine</h1>
+
+<p class="lead"><a href="/">Tänavakivi paigaldus</a> eluasemepiirkonnas kestab keskmiselt 3–7 päeva ühe õue kohta (50–150 m²), tekitab müra 60–85 dB vahemikus ning nõuab parkimisruumi 2–3 sõidukile. Naabreid tuleks teavitada vähemalt 7 päeva ette ja kõige mugavam aken paigalduseks on tööpäeviti hommikupoolikul, kui enamik naabreid on tööl.</p>
+
+<div class="answer-card">
+  <strong>Lühivastus:</strong> Eluasemepiirkonnas tänavakivi paigaldus nõuab kolme asja: <strong>naabrite teavitamine 7+ päeva ette</strong>, <strong>transport ja prahi äravedu hommikupoolikul</strong> ning <strong>parkimisplaani kokkulepe</strong>. Tüüpiline 80 m² õu valmib 4–5 tööpäevaga, müra on intensiivseim 2–3 päeva (pinnase ettevalmistus ja vibreerimine). Kõige libedam aeg paigalduseks on perekonna puhkuse ajal — sa ise ei kuule müra ja autod ei sega tööd. <a href="/kalkulaator/">Arvuta hind 1 minutiga</a> või helista <strong>+372 58374422</strong>.
+</div>
+
+<h2>Mida eluasemepiirkonna paigaldus tegelikult tähendab</h2>
+
+<p>Eluasemepiirkonnas — olgu see ridaelamu Tallinnas, korterelamute kvartal Tartus või eramurajoon Pärnus — pole <a href="/">tänavakivi paigaldus</a> pelgalt tehniline töö. See on <strong>logistiline puslemäng</strong>, kus naabrid, parkimine, müra, tolm ja transport peavad kõik harmoneeruma. Erinevalt äärelinna kruntidest, kus saad mängumaad lihtsalt eirata, pead tiheasustuses arvestama, et iga kasti tänavakivi saabumine, iga vibreerimispass ja iga prahi koorem mõjutab inimesi, kes elavad 5 meetri kaugusel sinu väravast.</p>
+
+<p>B Grupp on alates 2021. aastast paigaldanud tänavakivi rohkem kui 180 eluasemepiirkonna projekti — alates üksikust 40 m² sissesõidust kuni 800 m² ühistuhoovini. Selle artikli põhjal saad sa konkreetse tegevuskava: mida öelda naabritele, millal alustada, kuidas planeerida puhkust ja millised on tegelikud müratasemed.</p>
+
+<h2>Tüüpilise paigalduse ajakava — päev-päevalt</h2>
+
+<p>Eluasemepiirkonna paigaldus jaotub viide etappi, igal etapil on oma müra- ja häirimisprofiil. Allpool 80 m² sissesõidu näide (üks tüüpiline ridaelamu või eramu õu):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Päev</th>
+      <th>Tegevus</th>
+      <th>Müra tase</th>
+      <th>Naabri häiritus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Päev 1</td>
+      <td>Vana katte eemaldamine, kaevamine</td>
+      <td>75–85 dB (ekskavaator)</td>
+      <td>Kõrge</td>
+    </tr>
+    <tr>
+      <td>Päev 2</td>
+      <td>Killustiku vedu ja tihendamine</td>
+      <td>70–80 dB (vibreerimine)</td>
+      <td>Kõrge</td>
+    </tr>
+    <tr>
+      <td>Päev 3</td>
+      <td>Liivapadi, äärekivide paigaldus</td>
+      <td>55–65 dB (käsitöö)</td>
+      <td>Madal</td>
+    </tr>
+    <tr>
+      <td>Päev 4</td>
+      <td>Kivide laotamine ja lõikamine</td>
+      <td>60–75 dB (lõikepink ajuti)</td>
+      <td>Keskmine</td>
+    </tr>
+    <tr>
+      <td>Päev 5</td>
+      <td>Liivaga täitmine, koristus</td>
+      <td>45–55 dB (haarats, hari)</td>
+      <td>Madal</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Kui sinu projekt on suurem (näiteks 200 m² ühishoov), korrutad need päevad ligikaudu 1,8-ga — kahe tööbrigaadiga ei kahekordistu ajakava, kuna kaevamine ja transport jäävad limiteerivaks teguriks. Detailsemat ajakava arvutust saad lugeda artiklist <a href="/blog/kiire-tanavakivi-paigaldus/">kuidas saada kiire tänavakivi paigaldus</a> või vaata <a href="/kiire-tanavakivi-paigaldus/">kiire paigalduse lehte</a>.</p>
+
+<h3>Müra reaalsus — mida 85 dB tähendab</h3>
+
+<p>Vibreerimispassi tipphetked (75–85 dB) on võrreldavad tolmuimeja müraga 1 meetri kauguselt. Naabrile 10 meetri kaugusel taandub see ~65 dB-le — see on tavaline vestluse tase. Lõikepink (kuiva betoonkivi lõikamisel) on intensiivsem ja teravam, kuid kestab vaid 15–30 minutit päevas. Müra ei ole pidev; see tuleb pulssidena 2–8 minuti kaupa.</p>
+
+<h2>Naabritega koordineerimine — kuidas vältida konflikte</h2>
+
+<p>Üks vältimatu kogemus: kui sa ei teavita naabreid, saabub paigalduse esimesel päeval mõni rahulolematu inimene. Lahendus on lihtne ja tasuta — <strong>kirjalik teade postkasti 7–10 päeva enne tööde algust</strong>. B Grupp pakub kliendile valmis šablooni, mida saab printida 5 minutiga.</p>
+
+<p>Tüüpiline naabriteade sisaldab nelja elementi:</p>
+
+<ul>
+  <li><strong>Alguskuupäev ja eeldatav lõpukuupäev</strong> (anna 2 päeva varuvaru)</li>
+  <li><strong>Tööpäevade tundide vahemik</strong> üldsõnaliselt (näiteks "tööpäevadel hommikust pärastlõunani")</li>
+  <li><strong>Parkimisplaan</strong> — kus on töömasinad, kus saab naaber endiselt parkida</li>
+  <li><strong>Sinu telefoninumber</strong> — naaber peab saama otse helistada, mitte töömeestega vaielda</li>
+</ul>
+
+<div class="warning">
+  <strong>Hoiatus:</strong> Ära kunagi alusta paigaldust nädalavahetusel ilma naabrite eelneva selge nõusolekuta. Eesti kohaliku omavalitsuse müraeeskirjad piiravad ehitusmüra puhkepäevadel rangelt ning naabrid võivad esitada kaebuse kohalikule ametkonnale juba esimese tunni jooksul.
+</div>
+
+<h3>Korterelamu või ühistu — vaja on koosolekut</h3>
+
+<p>Kui paigaldad ühistu hoovi (mitte ainult oma sissesõitu), tuleb läbida ühistu üldkoosolek või vähemalt juhatuse kirjalik nõusolek. See protsess võtab 2–4 nädalat, kuid ei ole läbiräägitav. Detailsema juhise leiad artiklist <a href="/blog/korterelamu-houvi-rekonstrueerimine/">korterelamu hoovi rekonstrueerimine</a>, kus on samm-sammult koosoleku ettevalmistuse juhend ja kuluarvestuse näidis.</p>
+
+<div class="cta-strip">
+  <div>
+    <strong>Tahad oma tööd planeerida ette?</strong>
+    <p>Saame koos paika panna ajakava, mis sobib sinu pere ja naabritega. Tasuta konsultatsioon.</p>
+  </div>
+  <div>
+    <a href="tel:+37258374422" class="btn btn-primary">📞 +372 58374422</a>
+    <a href="/#kontakt-top" class="btn btn-ghost">Saada päring</a>
+  </div>
+</div>
+
+<h2>Transport ja parkimine — kus mahuvad veokid</h2>
+
+<p>Üks 80 m² paigaldus toob piirkonda järgmist liiklust: 2 killustikukoormat (8-tonnine veok), 1 liivakoorem, 1–2 tänavakivi kohaletoimetamist (paletid), 1 prahi äravedu (vana asfaldi või muru jäätmed). Lisaks 1–2 brigaadi sõidukit (kaubikud) ning vajadusel ekskavaator madelveokil.</p>
+
+<p>Parkimine vajab kolme asja:</p>
+
+<ol>
+  <li><strong>Veoki manööverdusala</strong> — vähemalt 12 m pikkust ja 3,5 m laiust ruumi tagurdamiseks</li>
+  <li><strong>Materjali ladustamise ala</strong> — paletid (1,2 × 0,8 m, kaal kuni 1,4 t) ei tohi olla õhukesel asfaltil ega keset jalgkäijate teed</li>
+  <li><strong>Brigaadi sõidukite koht</strong> — 1–2 kaubikut kogu tööpäeva vältel</li>
+</ol>
+
+<h3>Kui sissesõit on kitsas — millise lahenduse saame</h3>
+
+<p>Kui sinu ridaelamu või eramu sissesõit on alla 3 m lai, ei pääse standardne 8-tonnine killustikuauto sisse. B Grupp lahendab selle kahel viisil: kas väiksem 3,5-tonnine veok (kaks reisi normaalse ühe asemel, lisakulu ~80 €) või materjal mahalaadimine naabertänavale ning kohale toomine ratastega kärudega (lisakulu ~120 € kahe tunni kohta).</p>
+
+<h2>Hinna kujunemine eluasemepiirkonnas</h2>
+
+<p>Tiheasustusega piirkonnas on tänavakivi paigaldus 8–15% kallim võrreldes vabalt seisva eramuga, kuna logistika nõuab rohkem aega. Allpool 2026. aasta tüüpilised hinnad:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Töö tüüp</th>
+      <th>Hind €/m² (lihtne juurdepääs)</th>
+      <th>Hind €/m² (tihe asustus)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Betoonkivi paigaldus (Brikers Tava)</td>
+      <td>32–42</td>
+      <td>38–48</td>
+    </tr>
+    <tr>
+      <td>Betoonkivi paigaldus (Brikers Klassik)</td>
+      <td>38–52</td>
+      <td>44–58</td>
+    </tr>
+    <tr>
+      <td>Looduskivi (graniit)</td>
+      <td>78–125</td>
+      <td>88–140</td>
+    </tr>
+    <tr>
+      <td>Äärekivi paigaldus (jooksvameeter)</td>
+      <td>18–28</td>
+      <td>22–34</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Hinnaerinevus tuleneb peamiselt kolmest tegurist: <strong>materjali kohaletoomise viisist</strong> (suure veoki asemel mitu väiksemat reisi), <strong>prahi äraveost</strong> (linnaprügilas eluasemepiirkonnas tihti rangem järelevalve) ning <strong>kaitstavate elementide hulgast</strong> (vee- ja gaasiühendused, kommunikatsioonid maa all). Täpsemat hinnaanalüüsi vaata artiklitest <a href="/blog/tanavakivi-paigaldus-hind/">tänavakivi paigaldus hind</a> ja <a href="/blog/tanavakivi-hind-tallinn/">tänavakivi hind Tallinnas</a>.</p>
+
+<h3>Kuidas saada soodsam hind eluasemepiirkonnas</h3>
+
+<p>Kolm konkreetset võtet, mis vähendavad sinu kulu 15–30%:</p>
+
+<ul>
+  <li><strong>Ühista naabritega</strong> — kui sina ja naaber tellite paigalduse koos, jaguneb transport ja seadistus kahe tellimuse vahel. Kokkuhoid 8–12% mõlemale poolele.</li>
+  <li><strong>Vali pehmem nõudlushooaeg</strong> — märts–aprill ja oktoober on hinnad 10–18% madalamad kui juuni–august.</li>
+  <li><strong>Valmista juurdepääs ise ette</strong> — kui sina muruvõsa ise eemaldad ja vana kivi välja kaevad, säästad 4–6 €/m².</li>
+</ul>
+
+<p>Loe ka <a href="/blog/kuidas-saada-soodne-tanavakivi-hind/">kuidas saada soodne tänavakivi hind</a> ja <a href="/blog/tanavakivi-soodushinnad-2026/">2026 soodushinnad</a>.</p>
+
+<h2>Puhkuse ajal paigaldus — kõige mugavam variant</h2>
+
+<p>Ligi 40% B Grupi eluasemepiirkonna klientidest valib paigalduseks oma suvepuhkuse aja. Põhjus on lihtne: sa ei kuule müra, sinu autod ei sega töömeeste juurdepääsu ja koju naasvalt avastad valmis õue. Selleks vajad sa kolme asja:</p>
+
+<ol>
+  <li><strong>Võtmete üleandmine</strong> kas usaldusisikule (naaber) või objektijuhile (B Grupp pakub turvalist võtmehoidlat)</li>
+  <li><strong>Veevarustuse tagamine</strong> — paigaldus vajab 200–400 l vett päevas (vibreerimine, koristus). Välikraan peab olema kättesaadav.</li>
+  <li><strong>Igapäevane fotoraport</strong> — küsi brigadirilt iga päeva lõpus 3–5 fotot WhatsAppi. See on standardne teenus, mille B Grupp pakub tasuta.</li>
+</ol>
+
+<p>Üks soovitus puhkuse-paigalduse kohta: planeeri paigalduse lõpukuupäev 2 päeva varem sinu koju naasmise päevast. See annab puhvri väikeste viivituste või lisatöö jaoks ning sa ei pea esimesel päeval koju jõudes objekti üle võtma.</p>
+
+<div class="cta-strip">
+  <div>
+    <strong>Planeerid puhkust juunis-augustis?</strong>
+    <p>Broneeri paigaldus juba mais. Hind kinnitatakse, ajakava on garanteeritud. 2-aastane garantii kõikidele töödele.</p>
+  </div>
+  <div>
+    <a href="/#kontakt-top" class="btn btn-ghost">Saada päring</a>
+    <a href="tel:+37258374422" class="btn btn-primary">📞 +372 58374422</a>
+  </div>
+</div>
+
+<h2>Prahi haldus — kuhu kaob vana kivi</h2>
+
+<p>Vanade asfaltkattekiht ja katmaterjal moodustavad 80 m² objekti juures 6–11 tonni jäätmeid. Eluasemepiirkonnas ei saa sa neid panna oma õuele "nädalaks ootama" — naabrid annavad teada. Lahendusi on kolm:</p>
+
+<ul>
+  <li><strong>Päevasiseselt äravedu</strong> — veok saabub samal päeval, kui kaevamine lõpeb. Kõige puhtam, lisakulu 90–140 €.</li>
+  <li><strong>Konteinerlahendus</strong> — 5 m³ konteiner sissesõidu kõrvale 2–3 päevaks. Kulu ~120–180 €.</li>
+  <li><strong>Sorteeritud taaskasutus</strong> — kui materjal on kvaliteetne betoon või graniit, saab seda taaskasutada. Mõnel juhul tuleb tagasimakse 20–40 €/tonn.</li>
+</ul>
+
+<p>B Grupp koordineerib prahi äraveo automaatselt — sina ei pea konteinerit broneerima ega prügilasse minema. Kulu on kuluarvestuses eraldi rida, mitte peidetud m²-hinda.</p>
+
+<h2>Mis võib eluasemepiirkonnas valesti minna — ja kuidas vältida</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Probleem</th>
+      <th>Sagedus</th>
+      <th>Ennetus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Naabri auto blokeerib tööala</td>
+      <td>~25% projekte</td>
+      <td>Eelnev teavitus + märk teel</td>
+    </tr>
+    <tr>
+      <td>Maa-alused kommunikatsioonid (gaas, vesi)</td>
+      <td>~12% projekte</td>
+      <td>Kasutaja Tehnovõrkude register enne kaevamist</td>
+    </tr>
+    <tr>
+      <td>Vihm pinnase ettevalmistuse ajal</td>
+      <td>~30% projekte (mai-okt)</td>
+      <td>2-päevane puhver ajakavas</td>
+    </tr>
+    <tr>
+      <td>Naabriteade puudub</td>
+      <td>~40% probleemkaebusi</td>
+      <td>Šabloon postkasti 7+ päeva ette</td>
+    </tr>
+    <tr>
+      <td>Vale tellitud kogus</td>
+      <td>~8% projekte</td>
+      <td>Täpne mõõtmine kalkulaatoriga</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Täpse koguse arvutamiseks soovitame kasutada meie <a href="/kalkulaator/">tänavakivi kalkulaatorit</a> — see arvestab ka 5% varuvaru lõikamiskaoks ja annab tulemuse 1 minutiga. Vajadusel loe ka <a href="/blog/kalkulaator-kuidas-kasutada/">kuidas kalkulaatorit kasutada</a>.</p>
+
+<h2>Eelarve planeerimine — kui palju tegelikult kulub</h2>
+
+<p>Kui sa mõtled "kui palju maksab 80 m² sissesõidu täielik uuendus eluasemepiirkonnas", on 2026. aasta tüüpiline koguarve 3 200–4 500 € (Brikers Tava + standardäärekivid + jäätmekäitlus). See sisaldab kõike: materjal, töö, transport, prahi ärakäik. Suurema õue (150 m²) puhul jääb arve 5 800–8 200 € vahele.</p>
+
+<p>Kui sinu eelarve on piiratud, loe artiklit <a href="/blog/sillutus-eelarve-3000-eurot/">sillutus 3000 eurose eelarvega</a> — seal on toodud konkreetsed valikud, kuidas väiksema eelarvega õue korrastada. Samuti vaata <a href="/blog/soodne-kiire-sissesoidu-paigaldus/">soodne ja kiire sissesõidu paigaldus</a>.</p>
+
+<h2>Mai 2026 turuolukord — kättesaadavus eluasemepiirkonnas</h2>
+
+<p>Käesoleval kuul (mai 2026) on B Grupil eluasemepiirkonna projektidele järjekord 2–3 nädalat — see on tavalisest tihedam, kuna kevade vastutusperiood algab. Juunis ja juulis ootame 4–5 nädalat. Kui sul on paigaldus plaanis suvel, vaata ka kokkuvõtet <a href="/blog/tanavakivi-paigaldus-mai-2026/">tänavakivi paigaldus mai 2026</a>, kus on detailne hooaja hinnaanalüüs ja kättesaadavuse prognoos.</p>
+
+<div class="faq">
+  <h2>Korduma kippuvad küsimused</h2>
+
+  <details>
+    <summary>Kui kaua kestab paigaldus 80 m² eluasemepiirkonna sissesõidule?</summary>
+    <p>Tüüpiline ajakava on 4–5 tööpäeva: päev 1 kaevamine, päev 2 killustik ja tihendamine, päev 3 äärekivid ja liivapadi, päev 4 kivide laotamine, päev 5 liivaga täitmine ja koristus. Vihma korral lisandub 1–2 päeva. Suurema projekti (200 m²) puhul kasvab kestus ligikaudu 1,8-kordseks.</p>
+  </details>
+
+  <details>
+    <summary>Kui valju müra paigaldus tekitab ja kui kaua?</summary>
+    <p>Maksimaalne müra on vibreerimispassi tipphetkedel 75–85 dB (võrdne tolmuimeja müraga 1 m kauguselt). Naabrile 10 m kaugusel taandub see ~65 dB-le. Müra ei ole pidev — see tuleb pulssidena 2–8 minuti kaupa. Intensiivseimad on päevad 1–2 (kaevamine ja tihendamine), seejärel päevad 3–5 on oluliselt vaiksemad.</p>
+  </details>
+
+  <details>
+    <summary>Kas peab naabrid eelnevalt teavitama?</summary>
+    <p>Jah, ja eelistatavalt 7–10 päeva enne tööde algust kirjaliku teatega postkasti. Teade peab sisaldama: alguskuupäev, eeldatav lõpukuupäev, parkimisplaan ja sinu telefoninumber. Korterelamu hoovi paigaldus nõuab lisaks ühistu juhatuse kirjalikku nõusolekut (protsess võtab 2–4 nädalat). B Grupp pakub kliendile valmis naabriteate šablooni tasuta.</p>
+  </details>
+
+  <details>
+    <summary>Kas saab paigaldada minu puhkuse ajal, kui ma kodus pole?</summary>
+    <p>Jah, see on isegi üks populaarsemaid valikuid (~40% B Grupi klientidest). Vajalik on: võtmete üleandmine usaldusisikule või objektijuhile, välikraani kättesaadavus (paigaldus vajab 200–400 l vett päevas) ja igapäevane WhatsApp-fotoraport (tasuta teenus). Soovitame planeerida paigalduse lõpukuupäev 2 päeva varem sinu naasmisest, et oleks puhver.</p>
+  </details>
+
+  <details>
+    <summary>Mis garantii B Grupp pakub?</summary>
+    <p>Kõigile paigaldustöödele kehtib 2-aastane garantii. See katab paigaldusvigadest tulenevad probleemid: kivide vajumine, äärekivide nihkumine, liivakao avastamine. Garantii ei kata vandalismi, raskete sõidukite tekitatud kahju (üle 3,5 t täismassiga) ega looduslikku kulumist. Garantiitööd on kliendile tasuta.</p>
+  </details>
+</div>
+
+<h2>Seotud artiklid</h2>
+
+<div class="related-grid">
+  <a href="/blog/kiire-tanavakivi-paigaldus/">
+    <strong>Kiire tänavakivi paigaldus</strong>
+    <p>Kuidas saada paigaldus kiiremini valmis ilma kvaliteedis järele andmata.</p>
+  </a>
+  <a href="/blog/korterelamu-houvi-rekonstrueerimine/">
+    <strong>Korterelamu hoovi rekonstrueerimine</strong>
+    <p>Samm-sammult juhend ühistu koosoleku ettevalmistuseks ja eelarvestamiseks.</p>
+  </a>
+  <a href="/blog/sillutus-eelarve-3000-eurot/">
+    <strong>Sillutus 3000 eurose eelarvega</strong>
+    <p>Konkreetsed valikud, mida saab teha väiksema eelarvega.</p>
+  </a>
+  <a href="/blog/soodne-kiire-sissesoidu-paigaldus/">
+    <strong>Soodne ja kiire sissesõidu paigaldus</strong>
+    <p>Eluasemepiirkonna lemmikteenus — odav ja kiire lahendus.</p>
+  </a>
+  <a href="/blog/tanavakivi-paigaldus-hind/">
+    <strong>Tänavakivi paigaldus hind</strong>
+    <p>Detailne hinnaanalüüs ja kulukomponendid 2026. aastal.</p>
+  </a>
+  <a href="/blog/">
+    <strong>Kõik blogi artiklid</strong>
+    <p>Vaata kõiki tänavakivi ja sillutuse teemalisi juhendeid.</p>
+  </a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Eluasemepiirkonnas paigaldus — naabrite, müra, prahi haldamine",
+      "description": "Praktiline juhend tänavakivi paigalduseks eluasemepiirkonnas: naabrite teavitamine, müratasemed, transport, parkimine ja puhkuse-aegse paigalduse planeerimine.",
+      "datePublished": "2026-05-17",
+      "dateModified": "2026-05-17",
+      "author": {
+        "@type": "Person",
+        "name": "Keio Soo",
+        "jobTitle": "Tegevjuht",
+        "telephone": "+372 58374422"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "B Grupp",
+        "legalName": "Balcon Grupp OÜ",
+        "url": "https://bgrupp.ee/",
+        "telephone": "+372 58374422",
+        "email": "info@bgrupp.ee"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://bgrupp.ee/blog/tanavakivi-uksikolaja-ohutu-paigaldus/"
+      },
+      "keywords": "naabrite tänavakivi paigaldus, eluasemepiirkonna paigaldus, paigalduse müra, tänavakivi puhkuse ajal"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Kui kaua kestab paigaldus 80 m² eluasemepiirkonna sissesõidule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tüüpiline ajakava on 4–5 tööpäeva: päev 1 kaevamine, päev 2 killustik ja tihendamine, päev 3 äärekivid ja liivapadi, päev 4 kivide laotamine, päev 5 liivaga täitmine ja koristus. Vihma korral lisandub 1–2 päeva. Suurema projekti (200 m²) puhul kasvab kestus ligikaudu 1,8-kordseks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kui valju müra paigaldus tekitab ja kui kaua?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Maksimaalne müra on vibreerimispassi tipphetkedel 75–85 dB. Naabrile 10 m kaugusel taandub see ~65 dB-le. Müra ei ole pidev — see tuleb pulssidena 2–8 minuti kaupa. Intensiivseimad on päevad 1–2 (kaevamine ja tihendamine), seejärel päevad 3–5 on oluliselt vaiksemad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas peab naabrid eelnevalt teavitama?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jah, eelistatavalt 7–10 päeva enne tööde algust kirjaliku teatega postkasti. Teade peab sisaldama alguskuupäeva, eeldatava lõpukuupäeva, parkimisplaani ja sinu telefoninumbri. Korterelamu hoovi paigaldus nõuab lisaks ühistu juhatuse kirjalikku nõusolekut."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas saab paigaldada minu puhkuse ajal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jah, see on populaarne valik (~40% klientidest). Vajalik on võtmete üleandmine, välikraani kättesaadavus (200–400 l vett päevas) ja igapäevane WhatsApp-fotoraport. Soovitame planeerida paigalduse lõpukuupäev 2 päeva varem sinu naasmisest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mis garantii B Grupp pakub?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Kõigile paigaldustöödele kehtib 2-aastane garantii. See katab paigaldusvigadest tulenevad probleemid: kivide vajumine, äärekivide nihkumine, liivakao avastamine. Garantii ei kata vandalismi ega looduslikku kulumist. Garantiitööd on kliendile tasuta."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Avaleht",
+          "item": "https://bgrupp.ee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://bgrupp.ee/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Eluasemepiirkonnas paigaldus — naabrite, müra, prahi haldamine",
+          "item": "https://bgrupp.ee/blog/tanavakivi-uksikolaja-ohutu-paigaldus/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>B Grupp</h4>
+        <p style="color:#86efac">B Grupp — soodsa hinnaga tänavakivi paigaldus eramajadele üle Eesti. Fikseeritud hind, kiire algus.</p>
+        <p style="margin-top:12px"><strong style="color:#fff">+372 58374422</strong><br>info@bgrupp.ee</p>
+      </div>
+      <div>
+        <h4>Hinnad</h4>
+        <a href="#hinnad">Eramaja õu — 16 €/m²</a>
+        <a href="#hinnad">Tänavakivi tervik — 28 €/m²</a>
+        <a href="#hinnad">Graniit premium — 35 €/m²</a>
+        <a href="#hinnad">Äärekivi — 24 €/jm</a>
+      </div>
+      <div>
+        <h4>Piirkond</h4>
+        <a href="#">Tallinn ja Harjumaa</a>
+        <a href="#">Tartu ja Tartumaa</a>
+        <a href="#">Pärnu ja Pärnumaa</a>
+        <a href="#">Üle Eesti</a>
+      </div>
+      <div>
+        <h4>Info</h4>
+        <a href="#kkk">Korduma kippuvad küsimused</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#">Privaatsuspoliitika</a>
+        <a href="#">Tingimused</a>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 B Grupp · Reg nr 16294742 · Kõik õigused kaitstud</div>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <a href="tel:+37258374422" class="btn btn-secondary">📞 Helista</a>
+  <a href="#kontakt-top" class="btn btn-primary">⚡ Saa hind</a>
+</div>
+
+</body>
+</html>

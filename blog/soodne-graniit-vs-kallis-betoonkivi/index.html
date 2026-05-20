@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soodne graniit vs kallis betoonkivi — kummast on rohkem...</title>
+  <meta name="description" content="Soome graniit ~35 €/m² vs premium Aroc betoonkivi ~18 €/m² — millal valida kumba. Hiina graniit kui keskmine valik. Eluea/hinna suhe analüüs.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bgrupp.ee/blog/soodne-graniit-vs-kallis-betoonkivi/">
+
+  <meta property="og:title" content="Soodne graniit vs kallis betoonkivi — kummast on rohkem...">
+  <meta property="og:description" content="Soome graniit ~35 €/m² vs premium Aroc betoonkivi ~18 €/m² — millal valida kumba. Hiina graniit kui keskmine valik. Eluea/hinna suhe analüüs.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://bgrupp.ee/blog/soodne-graniit-vs-kallis-betoonkivi/">
+  <meta property="og:image" content="https://bgrupp.ee/og-image.jpg">
+  <meta property="og:locale" content="et_EE">
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#f7fdf9;--surface:#fff;--ink:#052e1a;--ink-2:#15543a;--muted:#5b8071;
+      --accent:#16a34a;--accent-dark:#15803d;--accent-soft:#dcfce7;
+      --line:#d1fae5;--success:#15803d;--warn:#b45309;--radius:12px;
+      --shadow:0 1px 2px rgba(0,0,0,.04),0 4px 12px rgba(5,46,26,.08);
+      --shadow-lg:0 10px 30px rgba(5,46,26,.12);
+    }
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+      background:var(--bg);color:var(--ink);line-height:1.55;font-size:17px;
+      -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    }
+    img{max-width:100%;height:auto;display:block}
+    a{color:var(--accent-dark);text-decoration:none}
+    a:hover{text-decoration:underline}
+    button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+
+    .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+    section{padding:64px 0}
+    @media(min-width:768px){section{padding:88px 0}}
+
+    h1,h2,h3{line-height:1.15;letter-spacing:-.02em;font-weight:800;color:var(--ink)}
+    h1{font-size:clamp(2.1rem,5vw,3.4rem)}
+    h2{font-size:clamp(1.7rem,3.5vw,2.3rem);margin-bottom:.5em}
+    h3{font-size:1.2rem;margin-bottom:.4em}
+    p{color:var(--ink-2)}
+    .lead{font-size:1.15rem;color:var(--ink-2);max-width:640px}
+
+    /* Header */
+    .top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+    .top-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1140px;margin:0 auto;gap:14px}
+    .brand{font-weight:900;font-size:1.2rem;letter-spacing:-.02em;display:inline-flex;align-items:baseline;gap:2px}
+    .brand b{color:var(--accent)}
+    .brand small{font-size:.7rem;color:var(--muted);font-weight:700;margin-left:6px;text-transform:uppercase;letter-spacing:.05em}
+    .top-cta{display:flex;align-items:center;gap:10px}
+    .top-phone{font-weight:700;color:var(--ink);font-size:.95rem;white-space:nowrap}
+    @media(max-width:560px){.top-phone{display:none}}
+
+    /* Speed strip */
+    .speed-strip{background:var(--ink);color:#bbf7d0;font-size:.85rem;padding:8px 20px;text-align:center;font-weight:600}
+    .speed-strip strong{color:#fff}
+
+    /* Hero */
+    .hero{padding-top:48px;padding-bottom:32px;background:linear-gradient(180deg,#fff 0%,var(--bg) 100%)}
+    .hero-grid{display:grid;gap:32px;align-items:center}
+    @media(min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr;gap:48px}.hero{padding-top:72px;padding-bottom:56px}}
+    .hero h1{margin-bottom:.4em}
+    .hero h1 mark{background:var(--accent-soft);color:var(--accent-dark);padding:0 .15em;border-radius:6px}
+    .hero .lead{margin-bottom:24px}
+
+    /* Big price tile */
+    .price-tile{display:inline-flex;align-items:baseline;gap:10px;background:var(--accent-soft);padding:14px 18px;border-radius:12px;margin-bottom:20px;border:1px solid var(--line)}
+    .price-tile .num{font-size:2rem;font-weight:900;color:var(--accent-dark);letter-spacing:-.03em;line-height:1}
+    .price-tile .lbl{font-size:.95rem;color:var(--ink-2);font-weight:600}
+
+    /* Bullet list (USPs) */
+    .checks{list-style:none;margin:18px 0 24px;display:grid;gap:8px}
+    .checks li{font-size:1rem;color:var(--ink);padding-left:30px;position:relative}
+    .checks li::before{content:"✓";position:absolute;left:0;width:22px;height:22px;background:var(--accent);color:#fff;border-radius:50%;font-size:.8rem;font-weight:900;display:grid;place-items:center;top:1px}
+
+    .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:10px;font-weight:800;font-size:1rem;transition:transform .1s,box-shadow .15s,background .15s;text-decoration:none;min-height:50px}
+    .btn-primary{background:var(--accent);color:#fff;box-shadow:var(--shadow)}
+    .btn-primary:hover{background:var(--accent-dark);box-shadow:var(--shadow-lg);text-decoration:none}
+    .btn-secondary{background:var(--ink);color:#fff}
+    .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+    .btn-ghost:hover{background:var(--ink);color:#fff;text-decoration:none}
+
+    /* Quick form */
+    .quick{background:#fff;border-radius:14px;padding:24px;box-shadow:var(--shadow-lg);border:2px solid var(--accent)}
+    .quick .label-stripe{display:inline-block;background:var(--accent);color:#fff;font-size:.78rem;font-weight:800;padding:4px 10px;border-radius:6px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em}
+    .quick h2{font-size:1.4rem;margin-bottom:.3em}
+    .quick .sub{font-size:.95rem;color:var(--muted);margin-bottom:16px}
+    .field{margin-bottom:12px}
+    .field label{display:block;font-weight:700;font-size:.85rem;color:var(--ink);margin-bottom:5px}
+    .field input,.field select,.field textarea{
+      width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:8px;font:inherit;font-size:1rem;
+      background:#fff;color:var(--ink);transition:border-color .15s,box-shadow .15s;
+    }
+    .field input:focus,.field select:focus,.field textarea:focus{
+      outline:0;border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft);
+    }
+    .field-row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+    .quick .btn{width:100%;margin-top:6px}
+    .form-foot{margin-top:10px;font-size:.78rem;color:var(--muted);text-align:center}
+
+    /* Trust strip */
+    .trust{background:#fff;border-block:1px solid var(--line);padding:24px 0}
+    .trust-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;text-align:center}
+    @media(min-width:760px){.trust-grid{grid-template-columns:repeat(4,1fr);gap:24px}}
+    .trust-item .num{font-size:1.7rem;font-weight:900;color:var(--accent-dark);letter-spacing:-.02em}
+    .trust-item .lbl{font-size:.82rem;color:var(--muted);margin-top:2px;font-weight:600}
+
+    /* Pricing cards */
+    .pricing{background:#fff}
+    .pricing-grid{display:grid;gap:18px;margin-top:40px}
+    @media(min-width:760px){.pricing-grid{grid-template-columns:repeat(3,1fr)}}
+    .price-card{background:#fff;border:2px solid var(--line);border-radius:14px;padding:28px;position:relative;transition:transform .15s,border-color .15s,box-shadow .15s}
+    .price-card:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+    .price-card.featured{border-color:var(--accent);background:linear-gradient(180deg,var(--accent-soft) 0%,#fff 30%)}
+    .price-card .ribbon{position:absolute;top:-12px;left:24px;background:var(--accent);color:#fff;font-size:.72rem;font-weight:800;padding:4px 10px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em}
+    .price-card h3{font-size:1.15rem}
+    .price-card .from{font-size:.9rem;color:var(--muted);font-weight:600;margin-top:6px}
+    .price-card .big{font-size:2.2rem;font-weight:900;color:var(--ink);letter-spacing:-.03em;line-height:1;margin-top:4px}
+    .price-card .big small{font-size:1rem;color:var(--muted);font-weight:600}
+    .price-card ul{list-style:none;margin-top:18px}
+    .price-card ul li{font-size:.93rem;color:var(--ink-2);padding:6px 0 6px 22px;position:relative}
+    .price-card ul li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:900}
+    .price-card .btn{width:100%;margin-top:18px}
+
+    /* Process strip */
+    .process{background:var(--ink);color:#fff;padding:48px 0;text-align:center}
+    .process h2{color:#fff}
+    .process .lead{color:#bbf7d0;margin-left:auto;margin-right:auto}
+    .process-grid{display:grid;gap:18px;margin-top:40px;grid-template-columns:repeat(2,1fr)}
+    @media(min-width:760px){.process-grid{grid-template-columns:repeat(4,1fr)}}
+    .pstep{padding:18px}
+    .pstep .num{font-size:2.5rem;font-weight:900;color:var(--accent);letter-spacing:-.03em;line-height:1}
+    .pstep h3{color:#fff;margin-top:8px;font-size:1.05rem}
+    .pstep p{color:#bbf7d0;font-size:.92rem;margin-top:4px}
+
+    /* Gallery */
+    .gallery{background:var(--bg)}
+    .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:36px}
+    @media(min-width:760px){.gallery-grid{grid-template-columns:repeat(3,1fr);gap:12px}}
+    .gallery-grid img{aspect-ratio:4/3;width:100%;object-fit:cover;border-radius:10px;display:block;transition:transform .3s}
+    .gallery-grid img:hover{transform:scale(1.02)}
+
+    /* FAQ */
+    .faq{max-width:780px;margin:40px auto 0}
+    .faq details{background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:0;margin-bottom:8px;overflow:hidden;transition:border-color .15s}
+    .faq details[open]{border-color:var(--accent)}
+    .faq summary{padding:16px 20px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px;color:var(--ink)}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";font-size:1.4rem;color:var(--accent);transition:transform .15s;flex:none;font-weight:800}
+    .faq details[open] summary::after{transform:rotate(45deg)}
+    .faq details p{padding:0 20px 18px;color:var(--ink-2);font-size:.95rem}
+
+    /* Final CTA */
+    .cta-final{background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%);color:#fff;text-align:center}
+    .cta-final h2{color:#fff;font-size:clamp(1.8rem,4vw,2.6rem)}
+    .cta-final p{color:#dcfce7;font-size:1.1rem;max-width:540px;margin:12px auto 24px}
+    .cta-final .cta-row{justify-content:center}
+    .cta-final .btn-secondary{background:#fff;color:var(--accent-dark)}
+    .cta-final .btn-secondary:hover{background:var(--ink);color:#fff}
+    .cta-final .btn-ghost{color:#fff;border-color:#fff}
+    .cta-final .btn-ghost:hover{background:#fff;color:var(--accent-dark)}
+
+    footer{background:#022c1a;color:#86efac;padding:48px 0 28px;font-size:.92rem}
+    .foot-grid{display:grid;gap:28px;margin-bottom:32px}
+    @media(min-width:760px){.foot-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+    .foot-grid h4{color:#fff;margin-bottom:12px;font-size:1rem}
+    .foot-grid a{color:#bbf7d0;display:block;padding:3px 0}
+    .foot-grid a:hover{color:#fff}
+    .foot-bottom{border-top:1px solid #064e3b;padding-top:20px;text-align:center;font-size:.85rem}
+
+    .sticky-bar{display:none;position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 20px rgba(0,0,0,.08);padding:10px;z-index:40}
+    .sticky-bar .btn{flex:1;min-height:46px;padding:11px;font-size:.93rem}
+    @media(max-width:760px){.sticky-bar{display:flex;gap:8px}body{padding-bottom:74px}}
+    /* a11y: visible focus ring for keyboard users — WCAG 2.1 AA */
+    a:focus-visible,button:focus-visible,summary:focus-visible,.btn:focus-visible{outline:3px solid #16a34a;outline-offset:2px;border-radius:6px}
+    /* responsive tables — horizontal scroll on narrow viewports */
+    .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:1.5em 0}
+    .table-scroll table{margin:0;min-width:560px}
+    @media(max-width:560px){article table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap;min-width:0}}
+    /* very narrow screens — keep sticky CTAs compact */
+    @media(max-width:380px){.sticky-bar .btn{font-size:.86rem;padding:11px 8px;min-height:46px}.top-cta>.btn{padding:8px 12px;font-size:.85rem}}
+
+
+  </style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <a href="/" class="brand">B<b>Grupp</b><small>Soodne sillutus</small></a>
+    <div class="top-cta">
+      <a href="tel:+37258374422" class="top-phone">📞 +372 58374422</a>
+      <a href="#kontakt-top" class="btn btn-primary" style="padding:9px 14px;min-height:auto;font-size:.9rem">Saa hind</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="breadcrumbs" style="font-size:.85rem;color:#737373;margin-bottom:18px;padding-top:12px"><a href="/">Avaleht</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; Soodne graniit vs kallis betoonkivi — kummast on rohkem kasu?</nav>
+</div>
+
+<article style="max-width:780px;margin:0 auto;padding:0 20px">
+  <div class="article-meta">
+  <span class="meta-date">17. mai 2026</span>
+  <span class="meta-sep">·</span>
+  <span class="meta-author">Keio Soo</span>
+  <span class="meta-sep">·</span>
+  <span class="meta-read">8 min lugemist</span>
+</div>
+
+<h1>Soodne graniit vs kallis betoonkivi — kummast on rohkem kasu?</h1>
+
+<p class="lead">Kui kõrvuti seisavad Soome graniit hinnaga ~35 €/m² ja Aroc premium betoonkivi ~18 €/m², võib esmapilgul tunduda, et soodsam materjal on kogukulu mõttes parem valik. Tegelikkuses sõltub vastus eluiga/hinna suhtest, hoolduskulust ja sellest, kus kivi maandub — sõidutee, parkla või terrass.</p>
+
+<div class="answer-card">
+  <strong>Lühike vastus:</strong> Soome graniit (~35 €/m²) tasub end ära kõrgekoormuselistel pindadel ja sissesõitudel — 80+ aastat eluiga annab kogukuluks ~0,45 €/m²/aasta. Premium betoonkivi (~18 €/m²) on parim hoovides ja kõnniteedel, kus 25-aastane eluiga viib kogukulu ~0,75 €/m²/aastale. Hiina graniit (~22-28 €/m²) on keskmine, kuid valikuline — mõned partiid murenevad 10 aastaga.
+</div>
+
+<h2>1. Hinnavõrdlus 2026: mida iga materjal tegelikult maksab?</h2>
+
+<p>Materjalihinnad on suunavad vahemikud, sest sõltuvad mõõdust, värvist ja partii suurusest. Allolev tabel võrdleb kolme põhilist valikut B Grupp tarnijate hinnataseme põhjal.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Materjal</th>
+      <th>Hind €/m² (materjal)</th>
+      <th>Paigaldus €/m²</th>
+      <th>Kokku €/m²</th>
+      <th>Eluiga</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Aroc / Brikers premium betoonkivi</td><td>15-20</td><td>28-36</td><td>43-56</td><td>25-30 a</td></tr>
+    <tr><td>Premia tüüpbetoonkivi</td><td>9-13</td><td>25-32</td><td>34-45</td><td>20-25 a</td></tr>
+    <tr><td>Hiina graniit (lõhutud pind)</td><td>22-28</td><td>34-42</td><td>56-70</td><td>40-60 a</td></tr>
+    <tr><td>Soome / Skandinaavia graniit</td><td>32-40</td><td>36-46</td><td>68-86</td><td>80+ a</td></tr>
+    <tr><td>India graniit (lihvitud)</td><td>26-34</td><td>34-44</td><td>60-78</td><td>50-70 a</td></tr>
+  </tbody>
+</table>
+
+<p>Tabelist näeb, et premium betoonkivi kogukulu jääb tihti alla 50 €/m², samas kui Soome graniit ulatub 70-85 €/m². Erinevus paigaldatud m²-l on ~30 €, mis 100 m² hoovis tähendab ~3 000 € lisakulu graniidi kasuks.</p>
+
+<h2>2. Eluiga ja kogukulu — millal soodne materjal maksab rohkem?</h2>
+
+<p>Eluiga/hinna suhe näitab, mitu eurot maksab üks m² ühe aasta kohta. See arvutus paljastab, et "soodne" materjal pole automaatselt soodsam.</p>
+
+<h3>Kogukulu arvutus 100 m² näitel</h3>
+
+<ul>
+  <li><strong>Premium betoonkivi:</strong> 50 €/m² × 100 m² = 5 000 €. Eluiga 25 a → 2,00 €/m²/aasta.</li>
+  <li><strong>Soome graniit:</strong> 78 €/m² × 100 m² = 7 800 €. Eluiga 80 a → 0,98 €/m²/aasta.</li>
+  <li><strong>Hiina graniit:</strong> 63 €/m² × 100 m² = 6 300 €. Eluiga ~50 a → 1,26 €/m²/aasta.</li>
+</ul>
+
+<p>Pikas perspektiivis tuleb Soome graniit pea poole odavam aastapõhiselt. Aga see arvutus eeldab, et omanik on samas kohas 30+ aastat — kinnisvara müügi puhul see eelis kaob.</p>
+
+<div class="warning">
+  <strong>Tähelepanu:</strong> Eluea arvutused eeldavad korrektset alust (EVS 901-3 paigaldusstandard) ja regulaarset vuukliivapuistamist iga 2-3 aasta tagant. Halvasti paigaldatud graniit võib vajuda 5 aasta jooksul ja kaotada hinnaeelise.
+</div>
+
+<h2>3. Materjali omadused — mis kivi millises kohas töötab?</h2>
+
+<p>Vali materjal koormuse ja kasutuse järgi, mitte ainult hinna järgi. Sõidutee ja terrass nõuavad erinevaid omadusi.</p>
+
+<h3>Soome / Skandinaavia graniit</h3>
+<p>Survetugevus 200+ MPa, veeimavus alla 0,5%. Vastab EVS-EN 1342 standardile (looduskivi). Talub naastrehve, lumesahka ja soolatamist ilma pinnakahjustusteta. Ideaalne sissesõitudele, kuhu mahub auto kaaluga 1500-2500 kg.</p>
+
+<h3>Hiina graniit</h3>
+<p>Survetugevus 150-200 MPa, kuid kvaliteet kõigub partiide vahel. Soodsam Hiina graniit (G603, G654) võib külmakahjustustega hakata ~10 aasta järel pragunema, kui mineraalkomponent on ebaühtlane. Vali tarnija, kes tagab CE-märgistuse ja katsetussertifikaadi.</p>
+
+<h3>Premium betoonkivi (Aroc, Brikers)</h3>
+<p>Tehases survestatud EVS-EN 1338 standardi järgi, survetugevus 50-60 MPa, veeimavus alla 6%. Sobib kõnniteele, parklasse, hoovile. Sõidutee koormust talub, kui aluskiht on 30 cm killustikku + 4 cm sõelmeid.</p>
+
+<h2>4. Hiina graniit — keskmine valik või kompromiss?</h2>
+
+<p>Hiina graniidi positsioon hinnaskaalal (22-28 €/m²) teeb sellest ahvatleva keskmise. Praktikas läheb vaja kaht asja: usaldusväärset tarnijat ja õiget pinnatöötlust.</p>
+
+<ul>
+  <li><strong>Lõhutud pind (G684 must):</strong> libisemiskindlus hea, sobib sissesõitudesse.</li>
+  <li><strong>Termiline pind (G603 hall):</strong> esteetiline, kuid karedam puhastada.</li>
+  <li><strong>Lihvitud pind:</strong> kena, kuid talvel libe — terrassile sobib paremini kui sõiduteele.</li>
+</ul>
+
+<p>B Grupp partneritest tellitud Hiina graniidi puhul küsime alati 28-päevase külmataluvuse katse tulemused. Kui partii talub 56 külma-sula tsüklit ilma murenemiseta, võib seda paigaldada välistingimustes pikaajaliselt.</p>
+
+<p class="cta-strip" style="background:#16a34a;color:white;padding:24px;border-radius:8px;margin:32px 0;text-align:center;">
+  <strong style="display:block;font-size:1.2em;margin-bottom:12px;">Pole kindel, kumb materjal sobib teie hoovi?</strong>
+  Saada mõõdud ja saa konkreetne hinnapakkumine 1 minutiga.
+  <br><br>
+  <a href="/#kontakt-top" class="btn btn-ghost">Saada päring</a>
+  <a href="tel:+37258374422" class="btn btn-primary">📞 +372 58374422</a>
+</p>
+
+<h2>5. Hooldus ja vuugid — kus kulud tegelikult tekivad?</h2>
+
+<p>Materjali ostuhind on ~40% kogukulust. Ülejäänud 60% moodustavad paigaldus, hooldus ja vuukide täitmine. Vuukliiv tuleb täiendada iga 2-3 aasta tagant — see kehtib nii graniidi kui betoonkivi puhul.</p>
+
+<h3>Aastane hoolduskulu m² kohta</h3>
+
+<table>
+  <thead>
+    <tr><th>Materjal</th><th>Vuukliiv €/m²</th><th>Pesu €/m²</th><th>Kokku €/m²/aasta</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Premium betoonkivi</td><td>0,30</td><td>0,40</td><td>0,70</td></tr>
+    <tr><td>Hiina graniit</td><td>0,25</td><td>0,30</td><td>0,55</td></tr>
+    <tr><td>Soome graniit</td><td>0,20</td><td>0,20</td><td>0,40</td></tr>
+  </tbody>
+</table>
+
+<p>30 aasta perspektiivis säästab Soome graniit hooldusele ~9 €/m². 100 m² hoovis on see 900 € — väike, aga reaalne plussväärtus.</p>
+
+<h2>6. Millal valida graniit, millal betoonkivi?</h2>
+
+<p>Otsuse võti on koormus ja kasutusaeg. Kui plaanid kinnistut hoida 20+ aastat ja kasutad sissesõitu igapäevaselt, tasub graniit. Kui pind on terrass või kõnnitee ja maja müük on 10 aasta horisondis, on betoonkivi ratsionaalne.</p>
+
+<h3>Vali graniit, kui:</h3>
+<ul>
+  <li>Sissesõit on naastrehvidega autodele.</li>
+  <li>Plaanid pinda kasutada 30+ aastat.</li>
+  <li>Soovid premium-välimust kinnisvara väärtuse tõstmiseks.</li>
+  <li>Pind asub mereäärses kliimas (soolane õhk lagundab betoonkivi pinda kiiremini).</li>
+</ul>
+
+<h3>Vali betoonkivi, kui:</h3>
+<ul>
+  <li>Pind on hoov, terrass või kõnnitee (madal koormus).</li>
+  <li>Eelarve on alla 60 €/m² paigaldatuna.</li>
+  <li>Tahad mustrivalikut (raudtee-, lillemustrit) — betoonkivil on rohkem disainivõimalusi.</li>
+  <li>Projekt peab valmima kiiresti — Aroc ja Brikers on alati laos saadaval.</li>
+</ul>
+
+<p>Kasuta <a href="/kalkulaator/">meie kalkulaatorit</a>, et saada lähtehind oma m² kohta. Detailne pakkumine põhineb objekti mõõdistusel ja sisaldab killustikku, sõelmeid ning vuugitäidet.</p>
+
+<h2>7. Paigaldus — kvaliteedi tegelik mõõdupuu</h2>
+
+<p>Hea graniit halval alusel vajub kümne aastaga. Premium betoonkivi õigel alusel kestab 30 aastat. Aluskiht (30 cm killustik fr 0-32 + 4 cm killustiku sõelmed fr 0-4) on tähtsam kui pinnakivi hind. EVS 901-3 standard nõuab tihendamist vibroplaadiga vähemalt 95% kuni Proctor-tihedust.</p>
+
+<p>B Grupp paigaldab kuni 2 500 m² objekte ja kuni 200 000 € mahus. Suuremate kompleksprojektide puhul soovitame jagada etappideks. Vaata näiteid: <a href="/blog/eramuhoov-100m2-hinnaranges/">eramuhoov 100 m² hinnarangis</a>, <a href="/blog/korterelamu-houvi-rekonstrueerimine/">korterelamu hoovi rekonstrueerimine</a>, <a href="/blog/soodne-kiire-sissesoidu-paigaldus/">soodne kiire sissesõidu paigaldus</a>.</p>
+
+<h2>8. Erijuhud — saviste pinnaste ja kalda olukord</h2>
+
+<p>Eestis on palju saviseid pinnaseid, kus paigaldus nõuab paksemat killustikukihti (35-40 cm) ja geotekstiilikihti. Sellistel objektidel võib graniidi hinnaeelis kaduda — kogukulu ühtlustub betoonkiviga ~65 €/m² tasemel. Loe lisaks: <a href="/blog/tanavakivi-paigaldus-saviste-pinnastega/">tanavakivi paigaldus saviste pinnastega</a>.</p>
+
+<p>Üksikuolukorras (näiteks vanade plaatide vahetus 5-10 m² ulatuses) on betoonkivi alati praktilisem — moodulvalik on laiem ja remondiga toimetab kiiremini. Vaata: <a href="/blog/tanavakivi-uksikolaja-ohutu-paigaldus/">tanavakivi üksikuolukorra ohutu paigaldus</a>.</p>
+
+<p class="cta-strip" style="background:#16a34a;color:white;padding:24px;border-radius:8px;margin:32px 0;text-align:center;">
+  <strong style="display:block;font-size:1.2em;margin-bottom:12px;">Soodne ja kiire — saa hind 1 minutiga</strong>
+  Saada hoovi mõõdud ja meie pakume sobiva materjali eelarvega kooskõlas. 2-aastane paigaldusgarantii.
+  <br><br>
+  <a href="/#kontakt-top" class="btn btn-ghost">Saada päring</a>
+  <a href="tel:+37258374422" class="btn btn-primary">📞 +372 58374422</a>
+</p>
+
+<h2>Korduma kippuvad küsimused</h2>
+
+<div class="faq">
+  <details>
+    <summary>Kui palju graniit täpsemalt maksab võrreldes betoonkiviga?</summary>
+    <p>Soome graniit jääb paigaldatuna vahemikku 68-86 €/m², premium betoonkivi 43-56 €/m². Erinevus on ~25-30 €/m². 100 m² objektil tähendab see ~3 000 € lisakulu graniidi kasuks.</p>
+  </details>
+  <details>
+    <summary>Kas Hiina graniit on betoonkivist parem valik?</summary>
+    <p>Sõltub partii kvaliteedist. Hea Hiina graniit (CE-märgisega, 56 külma-sula tsükli katse läbinud) kestab 40-60 aastat. Halva kvaliteediga partii võib mureneda 10 aastaga. Premium betoonkivi 25-aastane eluiga on ennustatavam.</p>
+  </details>
+  <details>
+    <summary>Kui pikk on B Grupi garantii?</summary>
+    <p>Paigaldustöödele anname kuni 2-aastase garantii. Materjali tehasegarantii kehtib eraldi: Aroc ja Brikers 5 aastat, looduskivi tarnijate sertifikaadi alusel.</p>
+  </details>
+  <details>
+    <summary>Kumb materjal sobib paremini sissesõidule auto jaoks?</summary>
+    <p>Soome graniit talub raskemat koormust (200+ MPa survetugevus vs 50-60 MPa betoonkivil). Naastrehvidega kasutusel kulub betoonkivi pinnakiht 15-20 aastaga, graniit jääb muutumatuks 80+ aastat.</p>
+  </details>
+  <details>
+    <summary>Kas saab kombineerida — graniit sissesõidule ja betoonkivi hoovi?</summary>
+    <p>Jah, see on B Grupi sagedasim soovitus optimaalseks lahenduseks. Sissesõit graniidist (15-20 m²) ja ülejäänud hoov premium betoonkivist annab kogukulu ~55 €/m² ja parima eluea/hinna suhte. Saada mõõdud ja arvutame koos.</p>
+  </details>
+</div>
+
+<h2>Seotud artiklid</h2>
+
+<div class="related-grid">
+  <a href="/blog/tanavakivi-soodushinnad-2026/">Tänavakivi soodushinnad 2026</a>
+  <a href="/blog/sillutus-eelarve-3000-eurot/">Sillutus eelarvega 3 000 eurot</a>
+  <a href="/blog/kalkulaator-kuidas-kasutada/">Kalkulaator — kuidas kasutada</a>
+  <a href="/blog/tanavakivi-paigaldus-hind/">Tänavakivi paigaldus hind</a>
+  <a href="/kiire-tanavakivi-paigaldus/">Kiire tänavakivi paigaldus</a>
+  <a href="/blog/">Vaata kõiki artikleid</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Soodne graniit vs kallis betoonkivi — kummast on rohkem kasu?",
+      "description": "Soome graniit ~35 €/m² vs premium Aroc betoonkivi ~18 €/m² — kogukulu, eluiga ja hooldus võrreldes. Millal valida kumba.",
+      "datePublished": "2026-05-17",
+      "dateModified": "2026-05-17",
+      "author": {
+        "@type": "Person",
+        "name": "Keio Soo",
+        "jobTitle": "Tegevjuht",
+        "worksFor": { "@type": "Organization", "name": "Balcon Grupp OÜ" }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Balcon Grupp OÜ",
+        "url": "https://bgrupp.ee/",
+        "telephone": "+372 58374422",
+        "email": "info@bgrupp.ee"
+      },
+      "mainEntityOfPage": "https://bgrupp.ee/blog/soodne-graniit-vs-kallis-betoonkivi/",
+      "keywords": "soodne graniit, betoonkivi vs graniit, Soome graniit, Aroc betoonkivi, Hiina graniit"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Kui palju graniit täpsemalt maksab võrreldes betoonkiviga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Soome graniit jääb paigaldatuna vahemikku 68-86 €/m², premium betoonkivi 43-56 €/m². Erinevus on ~25-30 €/m². 100 m² objektil tähendab see ~3 000 € lisakulu graniidi kasuks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas Hiina graniit on betoonkivist parem valik?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sõltub partii kvaliteedist. Hea Hiina graniit (CE-märgisega, 56 külma-sula tsükli katse läbinud) kestab 40-60 aastat. Halva kvaliteediga partii võib mureneda 10 aastaga. Premium betoonkivi 25-aastane eluiga on ennustatavam."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kui pikk on B Grupi garantii?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Paigaldustöödele anname kuni 2-aastase garantii. Materjali tehasegarantii kehtib eraldi: Aroc ja Brikers 5 aastat, looduskivi tarnijate sertifikaadi alusel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kumb materjal sobib paremini sissesõidule auto jaoks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Soome graniit talub raskemat koormust (200+ MPa survetugevus vs 50-60 MPa betoonkivil). Naastrehvidega kasutusel kulub betoonkivi pinnakiht 15-20 aastaga, graniit jääb muutumatuks 80+ aastat."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kas saab kombineerida — graniit sissesõidule ja betoonkivi hoovi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jah, see on B Grupi sagedasim soovitus. Sissesõit graniidist (15-20 m²) ja ülejäänud hoov premium betoonkivist annab kogukulu ~55 €/m² ja parima eluea/hinna suhte."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Avaleht", "item": "https://bgrupp.ee/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bgrupp.ee/blog/" },
+        { "@type": "ListItem", "position": 3, "name": "Soodne graniit vs kallis betoonkivi", "item": "https://bgrupp.ee/blog/soodne-graniit-vs-kallis-betoonkivi/" }
+      ]
+    }
+  ]
+}
+</script>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>B Grupp</h4>
+        <p style="color:#86efac">B Grupp — soodsa hinnaga tänavakivi paigaldus eramajadele üle Eesti. Fikseeritud hind, kiire algus.</p>
+        <p style="margin-top:12px"><strong style="color:#fff">+372 58374422</strong><br>info@bgrupp.ee</p>
+      </div>
+      <div>
+        <h4>Hinnad</h4>
+        <a href="#hinnad">Eramaja õu — 16 €/m²</a>
+        <a href="#hinnad">Tänavakivi tervik — 28 €/m²</a>
+        <a href="#hinnad">Graniit premium — 35 €/m²</a>
+        <a href="#hinnad">Äärekivi — 24 €/jm</a>
+      </div>
+      <div>
+        <h4>Piirkond</h4>
+        <a href="#">Tallinn ja Harjumaa</a>
+        <a href="#">Tartu ja Tartumaa</a>
+        <a href="#">Pärnu ja Pärnumaa</a>
+        <a href="#">Üle Eesti</a>
+      </div>
+      <div>
+        <h4>Info</h4>
+        <a href="#kkk">Korduma kippuvad küsimused</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#">Privaatsuspoliitika</a>
+        <a href="#">Tingimused</a>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 B Grupp · Reg nr 16294742 · Kõik õigused kaitstud</div>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <a href="tel:+37258374422" class="btn btn-secondary">📞 Helista</a>
+  <a href="#kontakt-top" class="btn btn-primary">⚡ Saa hind</a>
+</div>
+
+</body>
+</html>
